@@ -1,5 +1,5 @@
 #include <stdio.h>
-int torre = 0, rainha = 0, bispo = 0, pecas; // Variáveis para guardar dados
+int torre = 0, rainha = 0, bispo = 0, cavalo = 0, pecas; // Variáveis para guardar dados
 
 int main() { 
     // Menu de peças 
@@ -7,6 +7,7 @@ int main() {
     printf("1. Torre\n");
     printf("2. Bispo\n");
     printf("3. Rainha\n");
+    printf("4. Cavalo\n");
     printf("Escolha uma peça para movimentar: ");
     scanf("%d", &pecas);
 
@@ -31,6 +32,24 @@ int main() {
         printf("Movimento da rainha:\n");
         for(rainha = 0; rainha < 8; rainha++) {     
             printf("Esquerda\n");
+        }
+        break;
+        
+    case 4: // Movimento do cavalo - 2 casas para baixo, 1 para esquerda (FOR, WHILE)
+        printf("Movimento do cavalo:\n");
+        for(int i = 0; i < 1; i++) { // Garante que o loop aconteça uma vez
+            
+            int movBaixo = 0; 
+            while(movBaixo < 2) { // Movimenta duas vezes para baixo
+                printf("Baixo\n");
+                movBaixo++;
+            }
+
+            int movEsquerda = 0;
+            while(movEsquerda < 1) { // Movimenta uma vez para esquerda
+                printf("Esquerda\n");
+                movEsquerda++;
+            }
         }
         break;
 
